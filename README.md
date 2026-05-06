@@ -11,8 +11,8 @@ A VirtualBox-backed Ubuntu 24.04 development VM managed by Vagrant.
 
 ```sh
 # 1. Clone this repo
-git clone https://github.com/<your-org>/vagrant-ubuntu.git
-cd vagrant-ubuntu
+git clone https://github.com/vibecoda/sandbox.git
+cd sandbox
 
 # 2. Create and edit your configuration
 cp config.example.yaml config.yaml
