@@ -1,0 +1,15 @@
+# Copy this file to config.yaml and edit it with your own paths.
+# config.yaml is gitignored — it will not be committed.
+
+vm:
+  cpus: 2
+  memory: 2048
+  hostname: "ubuntu-vagrant"
+  ip: "192.168.56.10"
+
+# Folders on your host machine to sync into the VM.
+# Each entry must have host_path (absolute path on your machine)
+# and guest_path (absolute path inside the VM).
+synced_folders:
+  - host_path: /path/to/your/projects
+    guest_path: /home/vagrant/projects
