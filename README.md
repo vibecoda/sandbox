@@ -51,6 +51,25 @@ The `provision.sh` script installs:
 - **Python**: uv package manager
 - **System**: `htop`, `net-tools`, `ca-certificates`, `file`
 
+## SSH Port Forwarding (OpenClaw Gateway UI)
+
+If you run [OpenClaw](https://openclaw.ai) on the VM, its gateway dashboard will be at `127.0.0.1:18789`. To reach it from your host machine, forward the port when you SSH in:
+
+```sh
+vagrant ssh -- -L 18789:127.0.0.1:18789
+```
+
+Then open **http://127.0.0.1:18789** in your host browser.
+
+Or add it to your `~/.ssh/config` for convenience:
+
+```
+Host ubuntu-vagrant
+  HostName 192.168.56.10
+  User vagrant
+  LocalForward 18789 127.0.0.1:18789
+```
+
 ## Managing the VM
 
 ```sh
